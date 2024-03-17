@@ -284,6 +284,47 @@
           }
         }
       }
+    },
+    "/delphi/validated-query": {
+      "post": {
+        "tags": ["delphi"],
+        "summary": "Validate query",
+        "description": "Validate query",
+        "operationId": "validateQuery",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": ["cube"]
+                  },
+                  "query": {
+                    "type": "object"
+                  },
+                  "validatedBy": {
+                    "type": "string"
+                  },
+                  "askedBy": {
+                    "type": "string"
+                  }
+                },
+                "required": ["question", "type", "query"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Validate query"
+          }
+        }
+      }
     }
   }
 }
