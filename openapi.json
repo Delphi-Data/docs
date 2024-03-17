@@ -137,6 +137,80 @@
           }
         }
       }
+    },
+    "/delphi/query": {
+      "post": {
+        "tags": ["delphi"],
+        "summary": "Query",
+        "description": "Query",
+        "operationId": "query",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "input": {
+                    "type": "string"
+                  },
+                  "fields": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "filters": {
+                    "type": "object"
+                  },
+                  "type": {
+                    "type": "string",
+                    "enum": ["cube"]
+                  },
+                  "notes": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "cubes": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/CubeCube"
+                    }
+                  }
+                },
+                "required": ["input", "fields"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    },
+                    "result": {
+                      "type": "object",
+                      "properties": {
+                        "query": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
