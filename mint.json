@@ -49,8 +49,12 @@
       "pages": ["introduction"]
     },
     {
-      "group": "SDKs and Components",
-      "pages": ["sdks/nodejs", "components/react"]
+      "group": "API and SDKs",
+      "pages": ["api-reference/introduction", "sdks/nodejs"]
+    },
+    {
+      "group": "Frontend Components",
+      "pages": ["components/react"]
     },
     {
       "group": "API Documentation",
