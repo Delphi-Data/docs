@@ -69,10 +69,6 @@
       "group": "Endpoints",
       "pages": [
         {
-          "group": "Conversations",
-          "pages": ["api-reference/conversations/[id]/get"]
-        },
-        {
           "group": "Delphi (Natural Language)",
           "pages": [
             "api-reference/delphi/filter-fields/post",
@@ -91,7 +87,7 @@
           "pages": ["api-reference/query/cube/post"]
         },
         {
-          "group": "Saved Queries",
+          "group": "Reports",
           "pages": [
             "api-reference/saved-queries/get",
             "api-reference/saved-queries/post",
