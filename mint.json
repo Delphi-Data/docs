@@ -46,18 +46,15 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
+      "pages": ["introduction"]
     },
     {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
-      ]
+      "group": "SDKs",
+      "pages": ["sdks/node"]
+    },
+    {
+      "group": "Components",
+      "pages": ["components/react"]
     },
     {
       "group": "API Documentation",
