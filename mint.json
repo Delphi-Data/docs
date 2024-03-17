@@ -50,7 +50,7 @@
     },
     {
       "group": "SDKs",
-      "pages": ["sdks/node"]
+      "pages": ["sdks/nodejs"]
     },
     {
       "group": "Components",
