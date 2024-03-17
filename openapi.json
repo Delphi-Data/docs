@@ -732,6 +732,44 @@
             }
           }
         }
+      },
+      "delete": {
+        "tags": ["delphi"],
+        "summary": "Delete saved query",
+        "description": "Delete saved query",
+        "operationId": "deleteSavedQuery",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Delete saved query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
