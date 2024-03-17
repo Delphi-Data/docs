@@ -392,6 +392,57 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": ["delphi"],
+        "summary": "Create folder",
+        "description": "Create folder",
+        "operationId": "createFolder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "folder": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "parentFolderId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": ["title", "description"]
+                  }
+                },
+                "required": ["folder"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Create folder",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
