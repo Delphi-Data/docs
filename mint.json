@@ -109,7 +109,8 @@
   "api": {
     "baseUrl": "https://app.delphihq.com/api",
     "auth": {
-      "method": "key"
+      "method": "basic",
+      "name": "x-client-id:x-api-key"
     }
   }
 }
