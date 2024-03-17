@@ -69,6 +69,10 @@
       "group": "Endpoints",
       "pages": [
         {
+          "group": "Dashboards",
+          "pages": ["api-reference/folders/get", "api-reference/folders/post"]
+        },
+        {
           "group": "Delphi (Natural Language)",
           "pages": [
             "api-reference/delphi/filter-fields/post",
@@ -77,10 +81,6 @@
             "api-reference/delphi/validated-query/post",
             "api-reference/delphi/workflow/post"
           ]
-        },
-        {
-          "group": "Folders",
-          "pages": ["api-reference/folders/get", "api-reference/folders/post"]
         },
         {
           "group": "Query",
