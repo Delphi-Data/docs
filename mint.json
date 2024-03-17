@@ -49,7 +49,7 @@
       "pages": ["introduction"]
     },
     {
-      "group": "SDKs",
+      "group": "SDKs and Components",
       "pages": ["sdks/nodejs", "components/react"]
     },
     {
