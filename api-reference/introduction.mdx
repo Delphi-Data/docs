@@ -13,11 +13,11 @@ Note that settings and configuration should generally be handled via our platfor
 
 ## Authentication
 
-All API endpoints are authenticated using two headers: `X-CLIENT-ID` and `X-API-KEY`.
+All API endpoints are authenticated using two request headers: `X-CLIENT-ID` and `X-API-KEY`.
 
 Your API key is considered a secret, so it should only be used from the backend; you should not call these routes directly from your frontend.
 
-The exception is the Delphi (Natural Language) `Chat Workflow` endpoint, which can be called from the frontend by using an `X-PUBLIC-TOKEN` header instead of your API key. This is combined with a JWT which represents the user's RBAC permissions in your Delphi semantic layer.
+The exception is the [Delphi (Natural Language) `Chat Workflow`](/api-reference/delphi/workflow/post) endpoint, which is meant to be called from the frontend. See its page for more information.
 
 ```json
 "headers": [
