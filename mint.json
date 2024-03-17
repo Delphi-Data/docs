@@ -50,11 +50,7 @@
     },
     {
       "group": "SDKs",
-      "pages": ["sdks/nodejs"]
-    },
-    {
-      "group": "Components",
-      "pages": ["components/react"]
+      "pages": ["sdks/nodejs", "components/react"]
     },
     {
       "group": "API Documentation",
