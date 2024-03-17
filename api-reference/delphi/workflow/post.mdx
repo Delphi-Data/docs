@@ -2,3 +2,21 @@
 title: "Chat Workflow"
 openapi: "POST /delphi/workflow"
 ---
+
+## Authentication
+
+This route can be called from the frontend, so authentication is slightly different than other routes.
+
+To do so, include an `X-PUBLIC-TOKEN` header instead of your usual API key. This is combined with a JWT which represents the user's RBAC permissions in your Delphi semantic layer.
+
+If using the Cube semantic layer, you should also include an `X-CUBE-JWT` header for user RBAC.
+
+```json
+{
+  "headers": {
+    "X-CLIENT-ID": "delphi-labs",
+    "X-PUBLIC-TOKEN": "pt_1234567890abcdefghijklmnopq"
+    "X-CUBE-JWT": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...."
+  }
+}
+```
