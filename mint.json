@@ -53,11 +53,11 @@
       "pages": [
         {
           "group": "SDKs",
-          "pages": ["sdks/index", "sdks/node"]
+          "pages": ["sdks/node"]
         },
         {
           "group": "Frontend Components",
-          "pages": ["frontend-components/index", "frontend-components/react"]
+          "pages": ["components/react"]
         }
       ]
     },
