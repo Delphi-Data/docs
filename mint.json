@@ -105,5 +105,11 @@
     "twitter": "https://twitter.com/delphihq",
     "github": "https://github.com/Delphi-Data",
     "linkedin": "https://www.linkedin.com/company/delphilabs/"
+  },
+  "api": {
+    "baseUrl": "https://app.delphihq.com/api",
+    "auth": {
+      "method": "key"
+    }
   }
 }
