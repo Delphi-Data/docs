@@ -50,7 +50,16 @@
     },
     {
       "group": "SDKs and Frontend Components",
-      "pages": ["sdks/nodejs", "components/react"]
+      "pages": [
+        {
+          "group": "SDKs",
+          "pages": ["sdks/index", "sdks/node"]
+        },
+        {
+          "group": "Frontend Components",
+          "pages": ["frontend-components/index", "frontend-components/react"]
+        }
+      ]
     },
     {
       "group": "API Documentation",
