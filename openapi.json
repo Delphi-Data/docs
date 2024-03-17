@@ -575,6 +575,163 @@
             }
           }
         }
+      },
+      "post": {
+        "tags": ["delphi"],
+        "summary": "Create saved query",
+        "description": "Create saved query",
+        "operationId": "createSavedQuery",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "folderId": {
+                    "type": "string"
+                  },
+                  "savedQuery": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "connectionType": {
+                        "type": "string",
+                        "enum": ["cube"]
+                      },
+                      "chartType": {
+                        "type": "string",
+                        "enum": [
+                          "area",
+                          "bar",
+                          "bar_list",
+                          "donut",
+                          "line",
+                          "scatter",
+                          "table"
+                        ]
+                      },
+                      "dimensions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "metrics": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "dateRange": {
+                        "type": "object",
+                        "properties": {
+                          "from": {
+                            "type": "string"
+                          },
+                          "to": {
+                            "type": "string"
+                          },
+                          "selectValue": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "dateFilterField": {
+                        "type": "string"
+                      },
+                      "index": {
+                        "type": "string"
+                      },
+                      "pivot": {
+                        "type": "string"
+                      },
+                      "stacked": {
+                        "type": "boolean"
+                      },
+                      "filters": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      },
+                      "limit": {
+                        "type": "number"
+                      },
+                      "orderBy": {
+                        "type": "object"
+                      },
+                      "timeGranularity": {
+                        "type": "string",
+                        "enum": [
+                          "second",
+                          "day",
+                          "hour",
+                          "minute",
+                          "month",
+                          "quarter",
+                          "second",
+                          "week",
+                          "year"
+                        ]
+                      },
+                      "order": {
+                        "type": "number"
+                      },
+                      "width": {
+                        "type": "number"
+                      },
+                      "height": {
+                        "type": "number"
+                      },
+                      "x": {
+                        "type": "number"
+                      },
+                      "y": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "description",
+                      "connectionType",
+                      "chartType",
+                      "dimensions",
+                      "metrics",
+                      "index"
+                    ]
+                  }
+                },
+                "required": ["savedQuery"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Create saved query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
