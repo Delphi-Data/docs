@@ -491,6 +491,91 @@
           }
         }
       }
+    },
+    "/saved-queries": {
+      "get": {
+        "tags": ["delphi"],
+        "summary": "Get saved queries",
+        "description": "Get saved queries",
+        "operationId": "getSavedQueries",
+        "parameters": [
+          {
+            "name": "folderId",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Get saved queries",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    },
+                    "result": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "query": {
+                            "type": "object"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "folderId": {
+                            "type": "string"
+                          },
+                          "createdById": {
+                            "type": "string"
+                          },
+                          "connectionId": {
+                            "type": "string"
+                          },
+                          "order": {
+                            "type": "number"
+                          },
+                          "width": {
+                            "type": "number"
+                          },
+                          "height": {
+                            "type": "number"
+                          },
+                          "x": {
+                            "type": "number"
+                          },
+                          "y": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
