@@ -112,5 +112,6 @@
       "method": "basic",
       "name": "x-client-id:x-api-key"
     }
-  }
+  },
+  "openapi": ["/openapi.json"]
 }

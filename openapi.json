@@ -1,0 +1,142 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Delphi",
+    "description": "Delphi",
+    "version": "0.0.2"
+  },
+  "tags": [
+    {
+      "name": "delphi",
+      "description": "Delphi"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-KEY"
+      },
+      "clientId": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-CLIENT-ID"
+      }
+    },
+    "schemas": {
+      "CubeField": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "title", "type"]
+      },
+      "CubeCube": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "measures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CubeField"
+            }
+          },
+          "dimensions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CubeField"
+            }
+          }
+        },
+        "required": ["name", "title", "measures", "dimensions"]
+      }
+    }
+  },
+  "security": [
+    {
+      "apiKey": [],
+      "clientId": []
+    }
+  ],
+  "paths": {
+    "/delphi/filter-fields": {
+      "post": {
+        "tags": ["delphi"],
+        "summary": "Filter fields",
+        "description": "Filter fields",
+        "operationId": "filterFields",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Filter fields",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "enum": ["ok"]
+                    },
+                    "result": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "answer": {
+                          "type": "object",
+                          "properties": {
+                            "fields": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/components/schemas/CubeField"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
