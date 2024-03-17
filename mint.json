@@ -73,8 +73,30 @@
           "pages": ["api-reference/conversations/[id]/get"]
         },
         {
+          "group": "Delphi (Natural Language)",
+          "pages": [
+            "api-reference/delphi/filter-fields/post",
+            "api-reference/delphi/query/post",
+            "api-reference/delphi/search-entities/post",
+            "api-reference/delphi/validated-query/post",
+            "api-reference/delphi/workflow/post"
+          ]
+        },
+        {
           "group": "Folders",
           "pages": ["api-reference/folders/get", "api-reference/folders/post"]
+        },
+        {
+          "group": "Query",
+          "pages": ["api-reference/query/cube/post"]
+        },
+        {
+          "group": "Saved Queries",
+          "pages": [
+            "api-reference/saved-queries/get",
+            "api-reference/saved-queries/post",
+            "api-reference/saved-queries/delete"
+          ]
         }
       ]
     }
