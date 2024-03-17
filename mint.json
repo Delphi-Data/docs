@@ -66,11 +66,16 @@
       "pages": ["api-reference/introduction"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Endpoints",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        {
+          "group": "Conversations",
+          "pages": ["api-reference/conversations/[id]/get"]
+        },
+        {
+          "group": "Folders",
+          "pages": ["api-reference/folders/get", "api-reference/folders/post"]
+        }
       ]
     }
   ],
