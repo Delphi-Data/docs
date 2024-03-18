@@ -74,6 +74,164 @@
           }
         },
         "required": ["name", "title", "measures", "dimensions"]
+      },
+      "CoordinatorResponse": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "plan",
+              "searchDashboards",
+              "searchCompatibleFields",
+              "catalog",
+              "values",
+              "query",
+              "edit",
+              "answer",
+              "chart",
+              "message",
+              "sql",
+              "error"
+            ]
+          },
+          "response": {
+            "type": "string"
+          },
+          "catalog": {
+            "type": "object",
+            "properties": {
+              "dimensions": {
+                "type": "object"
+              },
+              "metrics": {
+                "type": "object"
+              },
+              "cubes": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CubeCube"
+                }
+              }
+            }
+          },
+          "question": {
+            "type": "string"
+          },
+          "query": {
+            "type": "object"
+          },
+          "table": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "filters": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "plan": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "chart": {
+            "type": "object",
+            "properties": {
+              "dataName": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string",
+                "enum": ["area", "bar", "bar_list", "donut", "line", "table"]
+              },
+              "measures": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "dimension": {
+                "type": "string"
+              },
+              "pivot": {
+                "type": "string"
+              },
+              "dimensions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "stacked": {
+                "type": "boolean"
+              }
+            },
+            "required": ["dataName", "type", "measures"]
+          },
+          "chartType": {
+            "type": "string",
+            "enum": ["area", "bar", "bar_list", "donut", "line", "table"]
+          },
+          "sql": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "conversation": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "author": {
+                  "type": "string",
+                  "enum": ["delphi", "user", "function"]
+                },
+                "text": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "object"
+                },
+                "colors": {
+                  "type": "object",
+                  "properties": {
+                    "primary": {
+                      "type": "string"
+                    },
+                    "secondary": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "conversationId": {
+                  "type": "string"
+                },
+                "userId": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "required": ["type", "response"]
       }
     }
   },
@@ -866,7 +1024,8 @@
                           "type": "string"
                         }
                       }
-                    }
+                    },
+                    { "$ref": "#/components/schemas/CoordinatorResponse" }
                   ]
                 }
               }
