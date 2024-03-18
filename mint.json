@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Delphi",
+  "name": "Delphi Documentation",
   "logo": {
     "dark": "/logo/logo-color-light-lg.png",
     "light": "/logo/logo-color-dark-sm.png"
