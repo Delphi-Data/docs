@@ -22,6 +22,11 @@
         "type": "apiKey",
         "in": "header",
         "name": "X-CLIENT-ID"
+      },
+      "publicToken": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-PUBLIC-TOKEN"
       }
     },
     "schemas": {
@@ -765,6 +770,104 @@
                       "enum": ["ok"]
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delphi/workflow": {
+      "post": {
+        "tags": ["delphi"],
+        "summary": "Chat Workflow",
+        "description": "Chat Workflow",
+        "operationId": "chatWorkflow",
+        "security": [
+          {
+            "clientId": [],
+            "publicToken": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "message": {
+                    "type": "string"
+                  },
+                  "conversation": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "author": {
+                          "type": "string",
+                          "enum": ["delphi", "user", "function"]
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "data": {
+                          "type": "object"
+                        },
+                        "colors": {
+                          "type": "object",
+                          "properties": {
+                            "primary": {
+                              "type": "string"
+                            },
+                            "secondary": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "conversationId": {
+                          "type": "string"
+                        },
+                        "userId": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Workflow",
+            "content": {
+              "application/json-seq": {
+                "schema": {
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "conversationId": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "data": {
+                          "type": "array",
+                          "items": {
+                            "type": "object"
+                          }
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
                 }
               }
             }
