@@ -970,28 +970,27 @@
                         }
                       },
                       "required": ["author", "text"]
-                    },
-
-                    "data": {
-                      "type": "object"
-                    },
-                    "colors": {
-                      "type": "object",
-                      "properties": {
-                        "primary": {
-                          "type": "string"
-                        },
-                        "secondary": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "conversationId": {
-                      "type": "string"
-                    },
-                    "userId": {
-                      "type": "string"
                     }
+                  },
+                  "data": {
+                    "type": "object"
+                  },
+                  "colors": {
+                    "type": "object",
+                    "properties": {
+                      "primary": {
+                        "type": "string"
+                      },
+                      "secondary": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "conversationId": {
+                    "type": "string"
+                  },
+                  "userId": {
+                    "type": "string"
                   }
                 }
               }
