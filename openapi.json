@@ -967,28 +967,30 @@
                         },
                         "text": {
                           "type": "string"
-                        },
-                        "data": {
-                          "type": "object"
-                        },
-                        "colors": {
-                          "type": "object",
-                          "properties": {
-                            "primary": {
-                              "type": "string"
-                            },
-                            "secondary": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "conversationId": {
+                        }
+                      },
+                      "required": ["author", "text"]
+                    },
+
+                    "data": {
+                      "type": "object"
+                    },
+                    "colors": {
+                      "type": "object",
+                      "properties": {
+                        "primary": {
                           "type": "string"
                         },
-                        "userId": {
+                        "secondary": {
                           "type": "string"
                         }
                       }
+                    },
+                    "conversationId": {
+                      "type": "string"
+                    },
+                    "userId": {
+                      "type": "string"
                     }
                   }
                 }
